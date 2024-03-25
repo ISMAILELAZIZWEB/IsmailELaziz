@@ -30,40 +30,36 @@
 </head>
 
 <body>
-<script>
-    // Display a warning message in the console
-    console.log("%cWarning! Inspecting this code may violate the terms of service.", "color: red; font-size: 18px;");
-
-    // Continuously log messages in the console
-    setInterval(() => {
-        console.clear();
-        console.log("Console is disabled.");
-    }, 1000);
-
-    // Obfuscate your JavaScript code (This is a simple example)
-    // In reality, you would use a proper obfuscation tool
-    function obfuscatedFunction() {
-        var a = "Hello";
-        var b = "World";
-        var result = a + " " + b;
-        return result;
-    }
-
-    // Add event listeners to detect when the developer tools are opened
-    document.addEventListener("keydown", function(e) {
-        if (e.keyCode == 123) {  // F12 key
-            alert("Developer tools are disabled.");
-            e.preventDefault();
-            return false;
+ <script>
+        // Detect when the developer tools are opened
+        function detectDevTools() {
+            // Check if the devtools object is available
+            if (typeof window.devtools !== "undefined" || window.outerWidth - window.innerWidth > 100 || window.outerHeight - window.innerHeight > 100) {
+                // Prompt a warning message
+                alert("Developer tools are disabled.");
+    
+                // Close the current window or redirect to another page
+                window.close();
+                // or
+                // window.location.href = "https://example.com";
+            }
         }
-    });
-
-    // Disable the right-click context menu
-    document.addEventListener("contextmenu", function(e) {
-        e.preventDefault();
-        alert("Right-click context menu is disabled.");
-    });
-</script>
+    
+        // Check for developer tools on page load
+        detectDevTools();
+    
+        // Check for developer tools when the window size changes
+        window.addEventListener("resize", detectDevTools);
+    
+        // Check for developer tools when the window is focused
+        window.addEventListener("focus", detectDevTools);
+    
+        // Disable the right-click context menu
+        document.addEventListener("contextmenu", function(e) {
+            e.preventDefault();
+            alert("Right-click context menu is disabled.");
+        });
+    </script>
 
     <!-- Preloader Area Start -->
     <div class="preloader">
