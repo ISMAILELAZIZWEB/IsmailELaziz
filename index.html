@@ -31,36 +31,6 @@
 
 <body>
  
- <script>
-        // Detect when the developer tools are opened
-        function detectDevTools() {
-            // Check if the devtools object is available
-            if (typeof window.devtools !== "undefined" || window.outerWidth - window.innerWidth > 100 || window.outerHeight - window.innerHeight > 100) {
-                // Prompt a warning message
-                alert("Developer tools are disabled.");
-    
-                // Close the current window or redirect to another page
-                window.close();
-                // or
-                // window.location.href = "https://example.com";
-            }
-        }
-    
-        // Check for developer tools on page load
-        detectDevTools();
-    
-        // Check for developer tools when the window size changes
-        window.addEventListener("resize", detectDevTools);
-    
-        // Check for developer tools when the window is focused
-        window.addEventListener("focus", detectDevTools);
-    
-        // Disable the right-click context menu
-        document.addEventListener("contextmenu", function(e) {
-            e.preventDefault();
-            alert("Right-click context menu is disabled.");
-        });
-    </script>
     <!-- Preloader Area Start -->
     <div class="preloader">
         <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
