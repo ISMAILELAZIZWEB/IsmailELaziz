@@ -30,6 +30,40 @@
 </head>
 
 <body>
+<script>
+    // Display a warning message in the console
+    console.log("%cWarning! Inspecting this code may violate the terms of service.", "color: red; font-size: 18px;");
+
+    // Continuously log messages in the console
+    setInterval(() => {
+        console.clear();
+        console.log("Console is disabled.");
+    }, 1000);
+
+    // Obfuscate your JavaScript code (This is a simple example)
+    // In reality, you would use a proper obfuscation tool
+    function obfuscatedFunction() {
+        var a = "Hello";
+        var b = "World";
+        var result = a + " " + b;
+        return result;
+    }
+
+    // Add event listeners to detect when the developer tools are opened
+    document.addEventListener("keydown", function(e) {
+        if (e.keyCode == 123) {  // F12 key
+            alert("Developer tools are disabled.");
+            e.preventDefault();
+            return false;
+        }
+    });
+
+    // Disable the right-click context menu
+    document.addEventListener("contextmenu", function(e) {
+        e.preventDefault();
+        alert("Right-click context menu is disabled.");
+    });
+</script>
 
     <!-- Preloader Area Start -->
     <div class="preloader">
