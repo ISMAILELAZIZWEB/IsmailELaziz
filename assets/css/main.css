@@ -131,7 +131,9 @@ body {
 	font-weight: var(--tj-fw-regular);
 	color: var(--tj-body);
 }
-
+.client-logo-area{
+	background-color: #0f0715;
+}
 h1,
 h2,
 h3,
