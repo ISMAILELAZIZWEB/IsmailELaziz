@@ -13,7 +13,7 @@ Description: Gerold - Personal Portfolio HTML5 Template
 	Preloader
 	Headers
 	Hero Section
-	Services Section
+	Services 
 	Portfolio Section
 	Popup Section
 	Resume Section
@@ -386,6 +386,37 @@ a h6:hover {
 .section-header p:last-child {
 	margin-bottom: 0;
 }
+
+.section-header-partners {
+	width: 100%;		
+	
+}
+.section-header-partners .section-title-partners {
+	font-size: 45px;
+	background: var(--tj-theme-primary);
+	background: -webkit-gradient(
+		linear,
+		left top,
+		right top,
+		from(var(--tj-theme-primary)),
+		to(var(--tj-white))
+	);
+	background: -o-linear-gradient(
+		left,
+		var(--tj-theme-primary) 0%,
+		var(--tj-white) 100%
+	);
+	background: linear-gradient(
+		to right,
+		var(--tj-theme-primary) 0%,
+		var(--tj-white) 100%
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	display: inline-block;		
+	
+}
+
 .owl-carousel .owl-nav button.owl-next,
 .owl-carousel .owl-nav button.owl-prev,
 .owl-carousel button.owl-dot {
