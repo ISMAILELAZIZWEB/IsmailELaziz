@@ -12,7 +12,7 @@ Description: Gerold - Personal Portfolio HTML5 Template
   Theme Default CSS
 	Preloader
 	Headers
-	Hero -
+	Hero Section
 	Services Section
 	Portfolio Section
 	Popup Section
@@ -346,21 +346,7 @@ a h6:hover {
 	line-height: 1;
 	font-weight: var(--tj-fw-bold);
 	display: -webkit-box;
-	display: to(var(--tj-white))
-	);
-	background: -o-linear-gradient(
-		left,
-		var(--tj-theme-primary) 0%,
-		var(--tj-white) 100%
-	);
-	background: linear-gradient(
-		to right,
-		var(--tj-theme-primary) 0%,
-		var(--tj-white) 100%
-	);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	display: inline-block;-ms-flexbox;
+	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
@@ -372,39 +358,7 @@ a h6:hover {
 	margin-bottom: 50px;
 	max-width: 700px;
 	width: 100%;
-	
 }
-
-.section-header-partners {
-	width: 100%;		
-	
-}
-.section-header-partners .section-title-partners {
-	font-size: 45px;
-	background: var(--tj-theme-primary);
-	background: -webkit-gradient(
-		linear,
-		left top,
-		right top,
-		from(var(--tj-theme-primary)),
-		to(var(--tj-white))
-	);
-	background: -o-linear-gradient(
-		left,
-		var(--tj-theme-primary) 0%,
-		var(--tj-white) 100%
-	);
-	background: linear-gradient(
-		to right,
-		var(--tj-theme-primary) 0%,
-		var(--tj-white) 100%
-	);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	display: inline-block;		
-	
-}
-
 .section-header .section-title {
 	font-size: 45px;
 	background: var(--tj-theme-primary);
@@ -1978,13 +1932,14 @@ body.loaded {
 }
 .testimonials-widget .testimonial-item .image-box {
 	width: 40%;
-	width: 120px;
+	max-width: 120px;
 }
 .testimonials-widget .testimonial-item .image-box img {
 	border-radius: 5px 5px 5px 125px;
 }
 .testimonials-widget .testimonial-item .logo-box {
-	width: 200px;
+	max-width: 100px;
+	width: 100%;
 }
 .testimonials-widget .testimonial-item .icon-box {
 	margin-bottom: 25px;
@@ -3438,47 +3393,3 @@ body.absolute_header .breadcrumb_area {
 	left: 0;
 }
 /* END: Breadcrumb Area */
-/**************** ## Client Logo Area ******************/
-/*******************************************************/
-.client-logo-area{
-	background-color: #0f0715;
-}
-.client-logo-wrap {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-	margin-left: -30px;
-	margin-right: -30px;
- }
-	@media only screen and (max-width: 991px) {
-	  .client-logo-wrap {
-		-webkit-box-pack: center;
-		-ms-flex-pack: center;
-		justify-content: center; } }
-	.client-logo-wrap .client-logo-item {
-	  width: calc(20% - 60px);
-	  margin: 0 30px 70px;
-	  -webkit-filter: grayscale(1) opacity(0.2);
-	  filter: grayscale(1) opacity(0.2); }
-	  @media only screen and (max-width: 991px) {
-		.client-logo-wrap .client-logo-item {
-		  width: calc(25% - 60px);
-		  margin-bottom: 40px; } }
-	  @media only screen and (max-width: 767px) {
-		.client-logo-wrap .client-logo-item {
-		  width: calc(33.33% - 60px); } }
-	  @media only screen and (max-width: 375px) {
-		.client-logo-wrap .client-logo-item {
-		  width: calc(50% - 60px); } }
-	  .client-logo-wrap .client-logo-item:hover {
-		-webkit-filter: grayscale(0) opacity(1);
-		filter: grayscale(0) opacity(1); }
-  
